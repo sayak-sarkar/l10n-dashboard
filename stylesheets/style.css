@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+/**
+ * Stylesheet Index:
+ * =================
+ *
+ * 0. Reset
+ * 1. Imports
+ * 2. Elements
+ * 3. ID & Class
+ * 4. Pseudoclass
+ * 5. Media Queries
+**/
+
+/* 0. Reset */
+* {
+	-moz-box-sizing:		border-box;
+	-webkit-box-sizing: 	border-box;
+	box-sizing:				border-box;
+}
+
+::selection { background: rgba(0, 0, 0, 0.1); }
+::-moz-selection { background: rgba(0, 0, 0, 0.1); }
+
+
+/* 1. Imports */
+
+/* 2. Elements */
+
+a {
+	outline:				0;
+	text-decoration:		none;
+}
+
+body {
+
+	background-color:		#fffffe;
+	background-attachment:	fixed;
+	color:					#333;
+	font-family:			Verdana, Georgia, Helvetica,	/* Desktop	*/
+							"Droid Sans", "Helvetica Neue",	/* Mobile	*/
+							Sans-serif;			/* Fallback	*/
+  	font-size:				16px;
+  	line-height:			20px;
+	margin:					0;
+	min-width:				320px;
+	padding:				0;
+	width:					100%;
+	padding-top:			40px;
+}
+
+footer {
+	background-color: 		#ddd;
+	bottom: 				0px;
+	font-size:				14px;
+	position: 				absolute;
+	text-align: 			center;
+	width: 					100%;
+}
+
+header 	{
+	background-color: 		#248;
+	box-shadow: 			0px 5px 5px #222;
+	color: 					#eee;
+	height: 				70px;
+	position: 				absolute;
+	text-align: 			center;
+	text-shadow: 			2px 2px #000;
+	top: 					-10px;
+	width: 					100%;
+}
+
+h1 {
+  font-size: 48px;
+  letter-spacing: -2px;
+  line-height: 100%;
+}
+h2 {
+  font-size: 32px;
+  letter-spacing: -1px;
+  line-height: 100%;
+}
+h3 {
+  font-size: 28px;
+  letter-spacing: -0.5px;
+  line-height: 100%;
+}
+h4 {
+  font-size: 24px;
+  letter-spacing: -0.25px;
+  line-height: 100%;
+}
+
+hr {
+	border:					1px solid;
+	border-color:			#aaa transparent #fff;
+	clear:					both;
+}
+
+/* 3. ID & Class */
+
+#body-container 	{
+	padding: 20px 200px;
+}
+
+.large {
+  font-size: 72px;
+  letter-spacing: -3px;
+  line-height: 100%;
+}
+
+.small, small {
+  font-size: 12px;
+  line-height: 100%;
+}
