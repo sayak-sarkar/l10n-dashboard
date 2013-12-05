@@ -34,7 +34,7 @@ a {
 
 body {
 
-	background-color:		#fffffe;
+	background-color:		#ddd;
 	background-attachment:	fixed;
 	color:					#333;
 	font-family:			Verdana, Georgia, Helvetica,	/* Desktop	*/
@@ -42,18 +42,20 @@ body {
 							Sans-serif;			/* Fallback	*/
   	font-size:				16px;
   	line-height:			20px;
-	margin:					0;
+	margin:					0 auto;
 	min-width:				320px;
-	padding:				0;
 	width:					100%;
 	padding-top:			40px;
+
 }
 
 footer {
 	background-color: 		#ddd;
 	bottom: 				0px;
 	font-size:				14px;
-	position: 				absolute;
+	height: 				20px;
+	padding-top: 			8px;
+	position: 				relative;
 	text-align: 			center;
 	width: 					100%;
 }
@@ -63,7 +65,7 @@ header 	{
 	box-shadow: 			0px 5px 5px #222;
 	color: 					#eee;
 	height: 				70px;
-	position: 				absolute;
+	position: 				fixed;
 	text-align: 			center;
 	text-shadow: 			2px 2px #000;
 	top: 					-10px;
@@ -100,7 +102,8 @@ hr {
 /* 3. ID & Class */
 
 #body-container 	{
-	padding: 20px 200px;
+    background-color: #fffffe;
+	padding: 20px 10% 40px 10%;
 }
 
 .large {
