@@ -7,20 +7,21 @@
  * 0. Reset
  * 1. Imports
  * 2. Elements
- * 3. ID & Class
- * 4. Pseudoclass
- * 5. Media Queries
+ * 3. ID 
+ * 4. Classes
+ * 5. Pseudoclass
+ * 6. Media Queries
 **/
 
 /* 0. Reset */
 * {
-	-moz-box-sizing:		border-box;
-	-webkit-box-sizing: 	border-box;
-	box-sizing:				border-box;
+	-moz-box-sizing:		    border-box;
+	-webkit-box-sizing: 	    border-box;
+	box-sizing:				    border-box;
 }
 
-::selection { background: rgba(0, 0, 0, 0.1); }
-::-moz-selection { background: rgba(0, 0, 0, 0.1); }
+::selection { background:       rgba(0, 0, 0, 0.1); }
+::-moz-selection { background:  rgba(0, 0, 0, 0.1); }
 
 
 /* 1. Imports */
@@ -28,91 +29,178 @@
 /* 2. Elements */
 
 a {
-	outline:				0;
-	text-decoration:		none;
+    color:                      #678;
+    outline:                    0;
+    text-decoration:            none;
+    text-shadow:                0 0 0 #666;
 }
 
 body {
-
-	background-color:		#ddd;
-	background-attachment:	fixed;
-	color:					#333;
-	font-family:			Verdana, Georgia, Helvetica,	/* Desktop	*/
-							"Droid Sans", "Helvetica Neue",	/* Mobile	*/
-							Sans-serif;			/* Fallback	*/
-  	font-size:				16px;
-  	line-height:			20px;
-	margin:					0 auto;
-	min-width:				320px;
-	width:					100%;
-	padding-top:			40px;
-
+	background-color:		    #ccc;
+	background-attachment:	    fixed;
+	color:					    #333;
+	font-family:			    Verdana, Georgia, Helvetica,	/* Desktop	*/
+							    "Droid Sans", "Helvetica Neue",	/* Mobile	*/
+							    Sans-serif;			/* Fallback	*/
+  	font-size:				    16px;
+  	line-height:			    20px;
+	margin:					    0 auto;
+	min-width:				    320px;
+	padding-top:			    40px;
+    width:                      100%;
 }
 
 footer {
-	background-color: 		#ddd;
-	bottom: 				0px;
-	font-size:				14px;
-	height: 				20px;
-	padding-top: 			8px;
-	position: 				relative;
-	text-align: 			center;
-	width: 					100%;
+	background-color: 		    #ccc;
+	bottom: 				    0px;
+	font-size:				    14px;
+	height: 				    20px;
+	padding-top: 			    8px;
+	position: 				    relative;
+	text-align: 			    center;
+	width: 					    100%;
 }
 
 header 	{
-	background-color: 		#248;
-	box-shadow: 			0px 5px 5px #222;
-	color: 					#eee;
-	height: 				70px;
-	position: 				fixed;
-	text-align: 			center;
-	text-shadow: 			2px 2px #000;
-	top: 					-10px;
-	width: 					100%;
+	background-color: 		    #248;
+	box-shadow: 			    0px 5px 5px #222;
+	color: 					    #eee;
+	height: 				    70px;
+	position: 				    fixed;
+	text-align: 			    center;
+	text-shadow: 			    2px 2px #000;
+	top:                        -10px;
+	width:                      100%;
 }
 
 h1 {
-  font-size: 48px;
-  letter-spacing: -2px;
-  line-height: 100%;
+    font-size:                  48px;
+    letter-spacing:             -2px;
+    line-height:                100%;
 }
 h2 {
-  font-size: 32px;
-  letter-spacing: -1px;
-  line-height: 100%;
+    font-size:                  32px;
+    letter-spacing:             -1px;
+    line-height:                100%;
 }
 h3 {
-  font-size: 28px;
-  letter-spacing: -0.5px;
-  line-height: 100%;
+    font-size:                  28px;
+    letter-spacing:             -0.5px;
+    line-height:                100%;
 }
 h4 {
-  font-size: 24px;
-  letter-spacing: -0.25px;
-  line-height: 100%;
+    font-size:                  24px;
+    letter-spacing:             -0.25px;
+    line-height:                100%;
 }
 
 hr {
-	border:					1px solid;
-	border-color:			#aaa transparent #fff;
-	clear:					both;
+	border:					    1px solid;
+	border-color:			    #aaa transparent #fff;
+	clear:					    both;
+}
+#mozBlock ul {
+    list-style-type:            none;
 }
 
-/* 3. ID & Class */
+/* 3. IDs */
 
 #body-container 	{
-    background-color: #fffffe;
-	padding: 20px 10% 40px 10%;
+    background-color:           #fffffe;
+    min-height:                 480px;
+	padding:                    20px 10% 40px 10%;
+}
+
+#dropper {
+    height:                     20px;
+    margin-bottom:              -5px;
+}
+
+#project-list {
+    background-color:           #eee;
+}
+
+/* 4. Classes */
+.col1 {
+    float:                      left;
+    min-height:                 460px;
+    padding-top:                10px;
+    width:                      40%;
+}
+.col2 {
+    float:                      right;
+    min-height:                 460px;
+    padding-top:                10px;
+    width:                      60%;
+}
+
+.hidden { 
+    visibility:                 hidden; 
+    display:                    none;
 }
 
 .large {
-  font-size: 72px;
-  letter-spacing: -3px;
-  line-height: 100%;
+    font-size:                  72px;
+    letter-spacing:             -3px;
+    line-height:                100%;
 }
 
+.non-rotated-image {
+    -webkit-transform:          rotate(0deg);
+            transform:          rotate(0deg);
+}
+
+.rotated-image {
+    -webkit-transform:          rotate(90deg);
+            transform:          rotate(90deg);
+}
 .small, small {
-  font-size: 12px;
-  line-height: 100%;
+    font-size:                  12px;
+    line-height:                100%;
+}
+
+.styled-select select{
+    background:                 transparent;
+    border:                     0;
+    border-radius:              0;
+    box-shadow:                 0px 0px 1px #222;
+    font-size:                  16px;
+    height:                     32px;
+    line-height:                1;
+    padding:                    5px;
+    padding-top:                2px;
+    width:                      184px;
+}
+
+.styled-select option{
+    background:                 transparent;
+}
+
+.styled-select {
+    background:                 url(../images/icons/drop-down-arrow.png) no-repeat right transparent;
+    border:                     1px solid #ccc;
+    height:                     32px;
+    overflow:                   hidden;
+    margin-bottom:              10px;
+    width:                      168px;
+}
+
+.unhidden {
+    visibility:                 visible; 
+    display:                    block;
+}
+
+/* 5. Media Queries */
+@media screen and (max-width:   600px) {
+    #body-container {
+        min-height:             520px;
+    }
+    .col1 {
+        width:                  100%;
+        min-height:             50px;
+    }
+    .col2 {
+        width:                  100%;
+        min-height:             320px;
+    }
 }

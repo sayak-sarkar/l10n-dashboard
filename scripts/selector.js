@@ -1,5 +1,4 @@
 (function ($) {
-	console.log("selector.js");
 	setTimeout(function () {
 		$.ajax({
 			url: "resources/languages.json",
@@ -21,8 +20,19 @@
 	}, 3000);
 })(jQuery);
 
+function toggleDisplay() {
+	var img = document.getElementById("dropper");
+	if (document.getElementById("mozBlock").className==='unhidden') {
+  		img.setAttribute("class", "non-rotated-image");
+		document.getElementById("mozBlock").className='hidden'
+	} 
+	else {
+		img.setAttribute("class", "rotated-image");
+		document.getElementById("mozBlock").className='unhidden';
+	};
+}
+
 function languageChanged(languageCode){
-	
 	var kde = document.getElementsByClassName('kde');
 	var gnome = document.getElementsByClassName('gnome');
 	var pootle = document.getElementsByClassName('pootle');
