@@ -1,5 +1,5 @@
 (function ($) {
-	setTimeout(function () {
+	//setTimeout(function () {
 		$.ajax({
 			url: "resources/languages.json",
 			crossDomain: true,
@@ -17,7 +17,7 @@
 				console.log(jqXHR.status);
 			},
 		});
-	}, 3000);
+	//}, 3000);
 })(jQuery);
 
 function toggleDisplay() {
