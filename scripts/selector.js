@@ -62,7 +62,7 @@ function languageChanged(languageCode){
 	for (var i = 0; i < locamotion.length; i++) {
 		var arr = locamotion.item(i).href.split("/");
 		var projectSlug = arr[arr.length - 2];
-		locamotion.item(i).setAttribute("href","http://mozilla.locamotion.org/projects/"+languageCode+"/"+projectSlug+"/");
+		locamotion.item(i).setAttribute("href","http://mozilla.locamotion.org/"+languageCode+"/"+projectSlug+"/");
 	};
 	for (var i = 0; i<transifex.length; i++) {
 
