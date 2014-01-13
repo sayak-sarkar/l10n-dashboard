@@ -36,6 +36,7 @@ function languageChanged(languageCode){
 	var kde = document.getElementsByClassName('kde');
 	var gnome = document.getElementsByClassName('gnome');
 	var pootle = document.getElementsByClassName('pootle');
+	var locamotion = document.getElementsByClassName('locamotion');
 	var transifex = document.getElementsByClassName('transifex');
 	
 	for (var i = 0; i<kde.length; i++) {
@@ -58,6 +59,11 @@ function languageChanged(languageCode){
 		//Update the project URL.
 		pootle.item(i).setAttribute("href", url+'/'+languageCode+"/");
 	}
+	for (var i = 0; i < locamotion.length; i++) {
+		var arr = locamotion.item(i).href.split("/");
+		var projectSlug = arr[arr.length - 2];
+		locamotion.item(i).setAttribute("href","http://mozilla.locamotion.org/projects/"+languageCode+"/"+projectSlug+"/");
+	};
 	for (var i = 0; i<transifex.length; i++) {
 
 		//Extract Project's URL Slug from URL.
