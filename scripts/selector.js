@@ -52,11 +52,11 @@ function languageChanged(languageCode){
 		var projectSlug = arr[4];
 
 		//Generate the required URL.
-		var urlArr = pootle.item(i).href.split("/",4);
+		var urlArr = pootle.item(i).href.split("/",3);
 		var url = urlArr.join("/");
 
 		//Update the project URL.
-		pootle.item(i).setAttribute("href", url+languageCode+"/");
+		pootle.item(i).setAttribute("href", url+'/'+languageCode+"/");
 	}
 	for (var i = 0; i<transifex.length; i++) {
 
