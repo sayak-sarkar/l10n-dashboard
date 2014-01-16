@@ -73,4 +73,80 @@ function languageChanged(languageCode){
 		//Update the project URL.
 		transifex.item(i).setAttribute("href", "https://www.transifex.com/projects/p/"+projectSlug+"/"+"language/"+languageCode+"/");
 	}
+	
+	
+	//when you choose "Choose Language" explicitly from Langauge combo box.
+
+	for (var i = 0; i<transifex.length; i++) {
+
+		//Extract Project's URL Slug from URL.
+		var arr = transifex.item(i).href.split("/");
+		var projectSlug = arr[5];
+                var url = arr[7];
+             
+		//Update the project URL.
+		if (url == "Choose%20Language") {
+               
+                        transifex.item(i).setAttribute("href", "https://www.transifex.com/projects/p/"+projectSlug+"/");
+                }
+               
+                
+	}
+	
+	for (var i = 0; i<locamotion.length; i++) {
+
+		//Extract Project's URL Slug from URL.
+		var arr = locamotion.item(i).href.split("/");
+		var projectSlug = arr[4];
+		var url = arr[3];
+		
+		//Update the project URL.
+		if (url == "Choose%20Language") {
+                        locamotion.item(i).setAttribute("href", "http://mozilla.locamotion.org/projects/"+projectSlug+"/");
+                }
+		
+		
+	}
+
+
+	for (var i = 0; i<pootle.length; i++) {
+		//Extract Project's URL Slug from URL.
+		var arr = pootle.item(i).href.split("/");
+		var projectSlug = arr[4];
+		var url=arr[3];
+		var urlArr = pootle.item(i).href.split("/",3);
+		var urlMain = urlArr.join("/");
+		//Generate the required URL.
+		
+		//Update the project URL.
+		if (url == "Choose%20Language") {
+                        pootle.item(i).setAttribute("href", urlMain);
+                }
+		
+	}
+
+	for (var i = 0; i<gnome.length; i++) {
+		//Update the project URL.
+		var arr = gnome.item(i).href.split("/");
+		var url=arr[4];
+
+		//Generate the required URL.
+		
+		//Update the project URL.
+		if(url == "Choose%20Language") {
+                        gnome.item(i).setAttribute("href", "https://l10n.gnome.org/teams/");
+                }
+		
+	}
+
+
+	for (var i = 0; i<kde.length; i++) {
+		var arr = kde.item(i).href.split("=");
+		var url=arr[1];
+
+		if(url == "Choose%20Language") {
+                        kde.item(i).setAttribute("href", "http://l10n.kde.org/teams-list.php");
+                }
+		
+	}
 }
