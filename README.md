@@ -4,6 +4,17 @@ l10n-dashboard
 A dashboard for keeping track of l10n statistics for various projects in a single page being developed with ease of access for localizers in mind. As an added feature the Dashboard would be developed in a mobile friendly responsive layout.
 
 
+High-Level Project Goals
+========================
+
+ 1. The system should provide a consolidated view for l10n statistics across projects and provide easy access to individual projects.
+ 2. The system should be capable of data visualization for real time data gathered from multiple sources, to provide enhanced reporting capabilities.
+ 3. The dashboard should be a double ended one: i.e. have separate views for organizations/maintainers and individuals.
+ 4. It has to be modularized, so as to separate the view from the back-end stores.
+ 5. It needs to easily deploy-able to enable individual teams to directly plug it to their own repositories and use it.
+ 6. The system has to be easily extendable to allow for easy modifications, as well as be light, efficient and user friendly.
+
+
 Development Status
 ==================
 
@@ -12,6 +23,7 @@ Development Status
 ~~The project is currently in **Development Phase 2**, with a list of localization project links and an option to customize the links as per the users choice of locale.~~
 
 The project is currently in **Development Phase 3**, where the dashboard APIs are currently being implemented.
+
 
 Development Plan
 ================
